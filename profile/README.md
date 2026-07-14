@@ -56,36 +56,12 @@ cd backend
 cp .env.example .env
 ```
 
-### 3. 데이터베이스 실행
-
-Docker Compose 사용:
-
-```bash
-cd mariadb-setup
-docker compose up -d
-cd ..
-```
-
-직접 MariaDB를 세팅하는 경우:
-
-```bash
-mysql -u root -p < mariadb-setup/01_schema.sql
-mysql -u root -p < mariadb-setup/02_seed_skills.sql
-mysql -u root -p < mariadb-setup/03_sample_data.sql
-mysql -u root -p < mariadb-setup/05_sample_saramin_job_notices.sql
-```
-
-### 4. 서버 실행
+### 3. 서버 실행
 
 ```bash
 ./gradlew bootRun
 ```
 
-### 5. 테스트 실행
-
-```bash
-./gradlew test
-```
 
 
 ## 만든 이유, 목표
